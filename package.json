@@ -8,12 +8,21 @@
   "scripts": {
     "build": "tsc",
     "start": "yarn build && node dist/src/index.js",
-    "dev": "nodemon src/index.ts",
+    "lint": "eslint ./src ./test --ext .ts",
+    "lint:fix": "eslint ./src ./test --ext .ts --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "typescript",
+    "node",
+    "api"
+  ],
   "devDependencies": {
     "@types/module-alias": "^2.0.1",
     "@types/node": "^20.3.2",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "eslint": "^8.43.0",
     "typescript": "^5.1.5"
   },
   "dependencies": {
